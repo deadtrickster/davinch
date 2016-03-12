@@ -36,6 +36,9 @@
         <pathelement location="lib/util/log4j.jar"/>
         <pathelement location="lib/util/trove.jar"/>
         <pathelement location="lib/util/commons-codec-1.9.jar"/>
+
+        <pathelement location="lib/util/servlet-api.jar"/>
+        <pathelement location="lib/util/jetty-all.jar"/>
     </path>
     <path id="run.Run OpenEphyra.classpath">
         <pathelement location="${JRE_LIB}"/>
