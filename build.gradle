@@ -13,7 +13,7 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.11'
     compile "org.spockframework:spock-core:1.0-groovy-2.3"
-    compile 'javax.servlet:servlet-api:2.5'
+//    compile 'javax.servlet:servlet-api:2.5'
 //    compile 'org.eclipse.jetty.aggregate:jetty-all-server:8.1.16.v20140903'
 //    compile 'org.slf4j:slf4j-api:1.7.12'
     compile 'commons-codec:commons-codec:1.10'
@@ -40,6 +40,7 @@ dependencies {
     compile files('lib/util/log4j.jar')
     compile files('lib/util/trove.jar')
     compile files('lib/util/jetty-all.jar')
+    compile files('lib/util/servlet-api.jar')
 }
 
 run {
