@@ -18,4 +18,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/thrift/thrift-0.9.3/lib/java/
 export CLASSPATH=$CLASSPATH:/usr/local/thrift/thrift-0.9.3/lib/java/build
 export JAVA_CLASS_PATH=$JAVA_CLASS_PATH:/usr/local/thrift/thrift-0.9.3/lib/java/build
 
-java -server -Xms512m -Xmx1500m info.ephyra.OpenEphyra
+java -Djava.library.path=lib/search/ -server -Xms512m -Xmx1500m info.ephyra.OpenEphyra
