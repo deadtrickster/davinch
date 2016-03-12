@@ -1,6 +1,7 @@
 package info.ephyra.trec;
 
 import info.ephyra.OpenEphyra;
+import info.ephyra.OpenEphyraOld;
 import info.ephyra.answerselection.AnswerSelection;
 import info.ephyra.answerselection.filters.AnswerPatternFilter;
 import info.ephyra.answerselection.filters.AnswerProjectionFilter;
@@ -48,7 +49,7 @@ import java.util.ArrayList;
  * @author Nico Schlaefer
  * @version 2008-01-26
  */
-public class OpenEphyraCorpus extends OpenEphyra {
+public class OpenEphyraCorpus extends OpenEphyraOld {
 	/**
 	 * Entry point of Ephyra. Initializes the engine and starts the command line
 	 * interface.
