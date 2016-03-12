@@ -11,7 +11,7 @@ export ASSERT=$1
 
 cd ..
 
-export INDRI_INDEX=/data/custom/
+source ../config.inc
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/thrift/thrift-0.9.3/lib/java/build
