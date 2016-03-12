@@ -6,8 +6,6 @@ apply plugin: 'groovy'
 apply plugin: 'application'
 mainClassName = 'info.ephyra.OpenEphyraServer'
 
-sourceCompatibility = 1.5
-
 repositories {
     mavenCentral()
 }
