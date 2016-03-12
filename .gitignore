@@ -3,3 +3,4 @@ log/*
 *.iml
 .idea/
 gradle/
+config.inc
