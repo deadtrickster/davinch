@@ -46,7 +46,7 @@ run {
 //    systemProperties System.getProperties()
 
     environment "INDRI_INDEX", "/data/wiki_indri_index/"
-    environment "THREADS", 10
+    environment "THREADS", "3"
     systemProperty "java.library.path", "lib/search/"
 
 //    args ""
