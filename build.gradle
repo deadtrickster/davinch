@@ -22,6 +22,7 @@ dependencies {
 
     compile files('lib/ml/maxent.jar')
     compile files('lib/ml/minorthird.jar')
+    compile files('lib/qa/javelin.jar')
     compile files('lib/nlp/jwnl.jar')
     compile files('lib/nlp/lingpipe.jar')
     compile files('lib/nlp/opennlp-tools.jar')
