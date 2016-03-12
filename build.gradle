@@ -18,6 +18,7 @@ dependencies {
     compile 'javax.servlet:servlet-api:2.5'
     compile 'org.eclipse.jetty.aggregate:jetty-all-server:8.1.16.v20140903'
     compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'commons-codec:commons-codec:1.10'
     testCompile 'junit:junit:4.12'
 
     compile files('lib/ml/maxent.jar')
@@ -29,6 +30,7 @@ dependencies {
     compile files('lib/nlp/plingstemmer.jar')
     compile files('lib/nlp/snowball.jar')
     compile files('lib/nlp/stanford-ner.jar')
+    compile files('lib/nlp/stanford-parser.jar')
     compile files('lib/nlp/stanford-postagger.jar')
     compile files('lib/search/bing-search-java-sdk.jar')
     compile files('lib/search/googleapi.jar')
