@@ -12,11 +12,15 @@ QA system forked from OpenEphyra.
 
 #Run
 
-Exec ```gradle run```
+Exec ```./gradlew run```
 
-If needed to add args, do like this:  
+If you want to add args, do like this(but default not necessary):  
 
-    gradle run -Pargs="hoge fuga piyo"
+    ./gradlew run -Pargs="hoge fuga piyo"
+    
+
+    
+
     
 
     
