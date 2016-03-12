@@ -9,6 +9,7 @@ QA system forked from OpenEphyra.
 2. create config.inc based on config_sample.inc
 3. install ant if you have not installed yet
 4. Exec ```./compile-openephyra.sh``` on root directory
+5. install thrift based on [this instruction](http://www.saltycrane.com/blog/2011/06/install-thrift-ubuntu-1010-maverick//)  
 
 #Run
 
