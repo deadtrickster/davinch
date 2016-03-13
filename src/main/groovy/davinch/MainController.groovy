@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
+import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
 @RestController
@@ -43,11 +44,13 @@ public class MainController {
     /** The directory of Ephyra, required when Ephyra is used as an API. */
     protected String dir;
 
-    @CrossOrigin(origins = "*")
+//    @CrossOrigin(origins = "*")
     @RequestMapping("/{query}")
-    public String index(@PathVariable String query) {
+    public String index(HttpServletRequest req, HttpServletResponse res, @PathVariable String query) {
 
         System.out.println("Query str: " + query);
+
+        res.setHeader("Access-Control-Allow-Origin", "*")
 
         if (!query) {
 //            response.setContentType("text/html;charset=utf-8");
