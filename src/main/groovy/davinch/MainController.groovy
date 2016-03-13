@@ -91,8 +91,7 @@ public class MainController {
             Logger.logListEnd();
         }
 
-        String answer = results[0].getAnswer();
-
+        String answer = results ? results[0].getAnswer() : null
         return answer ?: "Sorry, I cannot answer your question."
 
     }
