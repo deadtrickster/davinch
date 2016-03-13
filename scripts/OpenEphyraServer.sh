@@ -11,7 +11,8 @@ export CLASSPATH=bin:lib/ml/maxent.jar:lib/ml/minorthird.jar:lib/nlp/jwnl.jar:li
 #export ASSERT=$1
 
 # set INDRI data file dir
-source ../config.inc
+# source ../config.inc
+export INDRI_INDEX=/data/wiki_indri_index/
 
 cd ..
 
