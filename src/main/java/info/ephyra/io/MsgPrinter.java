@@ -5,10 +5,13 @@ import info.ephyra.nlp.semantics.Predicate;
 import info.ephyra.querygeneration.Query;
 import info.ephyra.questionanalysis.QuestionInterpretation;
 import info.ephyra.search.Result;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
+
+import org.slf4j.Logger;
 
 /**
  * <p>Prints out status and error messages as well as results to the standard
@@ -26,6 +29,8 @@ public class MsgPrinter {
 	private static boolean statusMsgs;
 	/** True, iff error messages are enabled. */
 	private static boolean errorMsgs;
+
+	private static final Logger log = LoggerFactory.getLogger(MsgPrinter.class);
 	
 	/**
 	 * Enables or disables status messages.
@@ -427,6 +432,7 @@ public class MsgPrinter {
 	 */
 	private static synchronized void printMessage(String message) {
 		System.out.println(message);
+		log.debug(message);
 		if (logWriter != null) try {
 			logWriter.write(message);
 			logWriter.newLine();
