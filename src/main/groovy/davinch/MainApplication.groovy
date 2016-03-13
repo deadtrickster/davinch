@@ -79,6 +79,9 @@ class MainApplication {
         String dir = System.getProperty("user.dir") + "/";
         println dir
 
+        MsgPrinter.enableStatusMsgs(true)
+        MsgPrinter.enableErrorMsgs(true)
+
         MsgPrinter.printInitializing();
 
         // create tokenizer
