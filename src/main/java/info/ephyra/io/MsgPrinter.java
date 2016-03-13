@@ -432,7 +432,7 @@ public class MsgPrinter {
 	 */
 	private static synchronized void printMessage(String message) {
 		System.out.println(message);
-		log.debug(message);
+		log.info(message);
 		if (logWriter != null) try {
 			logWriter.write(message);
 			logWriter.newLine();
