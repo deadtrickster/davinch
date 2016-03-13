@@ -13,6 +13,7 @@ import info.ephyra.answerselection.filters.ScoreNormalizationFilter
 import info.ephyra.answerselection.filters.ScoreSorterFilter
 import info.ephyra.answerselection.filters.StopwordFilter
 import info.ephyra.answerselection.filters.TruncationFilter
+import info.ephyra.io.Logger
 import info.ephyra.io.MsgPrinter
 import info.ephyra.nlp.LingPipe
 import info.ephyra.nlp.NETagger
@@ -54,6 +55,9 @@ class MainApplication {
                     ".serialized";
 
     public static void main(String[] args) {
+
+        Logger.setLogfile("log/OpenEphyra")
+        Logger.enableLogging(true)
 
         init()
 
