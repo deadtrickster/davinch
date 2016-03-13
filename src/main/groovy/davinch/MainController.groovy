@@ -10,6 +10,7 @@ import info.ephyra.questionanalysis.QuestionAnalysis
 import info.ephyra.questionanalysis.QuestionNormalizer
 import info.ephyra.search.Result
 import info.ephyra.search.Search
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -42,6 +43,7 @@ public class MainController {
     /** The directory of Ephyra, required when Ephyra is used as an API. */
     protected String dir;
 
+    @CrossOrigin(origins = "*")
     @RequestMapping("/{query}")
     public String index(@PathVariable String query) {
 
