@@ -34,7 +34,7 @@ public class FeatureExtractorFactory {
     }
 
     /**
-     * Invokes {@link FeatureExtractor#printFeatures} with feature names specified on the command line.
+     * Invokes {@link info.ephyra.questionanalysis.atype.extractor.FeatureExtractor#printFeatures} with feature names specified on the command line.
      * 
      * @param args command-line arguments: "&lt;Language&gt; &lt;datasetFile&gt; [&lt;feature1&gt; &lt;feature2&gt; ...]" 
      * @throws Exception

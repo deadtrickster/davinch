@@ -44,7 +44,7 @@ public class TRECNugget {
 		this.size = nSet.size();
 	}
 
-	/** @see Object#equals(Object)
+	/** @see java.lang.Object#equals(java.lang.Object)
 	 */
 	public boolean equals(Object o) {
 		if ((o == null) || !(o instanceof TRECNugget)) return false;

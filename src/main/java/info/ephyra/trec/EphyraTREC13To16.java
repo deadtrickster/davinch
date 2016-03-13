@@ -16,6 +16,7 @@ import info.ephyra.answerselection.filters.SentenceExtractionFilter;
 import info.ephyra.answerselection.filters.SentenceSplitterFilter;
 import info.ephyra.answerselection.filters.TermFilter;
 import info.ephyra.answerselection.filters.WebTermImportanceFilter;
+import info.ephyra.answerselection.filters.WikipediaGoogleTermImportanceFilter;
 import info.ephyra.io.Logger;
 import info.ephyra.io.MsgPrinter;
 import info.ephyra.nlp.NETagger;
@@ -564,6 +565,13 @@ public class EphyraTREC13To16 extends OpenEphyraCorpus {
 		//	sort out snippets containing no new terms
 		AnswerSelection.addFilter(new TermFilter());
 		
+		AnswerSelection.addFilter(
+				new WikipediaGoogleTermImportanceFilter(
+					WebTermImportanceFilter.LOG_LENGTH_NORMALIZATION,
+					WebTermImportanceFilter.LOG_LENGTH_NORMALIZATION,
+					false
+				)
+			);
 		AnswerSelection.addFilter(new ScoreSorterFilter());
 		
 		//	cut off result

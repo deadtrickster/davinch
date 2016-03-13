@@ -24,11 +24,11 @@ import edu.cmu.minorthird.classify.MutableInstance;
 
 /**
  * Feature extractor for English answer type classification.
- * <p> See {@link EnglishFeatureExtractor#initialize initialize}
+ * <p> See {@link info.ephyra.questionanalysis.atype.extractor.EnglishFeatureExtractor#initialize initialize} 
  * for a description of the input properties required by this class.
- * <p> See {@link EnglishFeatureExtractor#createInstance createInstance}
+ * <p> See {@link info.ephyra.questionanalysis.atype.extractor.EnglishFeatureExtractor#createInstance createInstance} 
  * for a description of the features extracted by this class.
- * <p> See {@link EnglishFeatureExtractor#loadFile loadFile}
+ * <p> See {@link info.ephyra.questionanalysis.atype.extractor.EnglishFeatureExtractor#loadFile loadFile} 
  * for a specification of the input file format.
  * 
  * @author Justin Betteridge

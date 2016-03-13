@@ -26,7 +26,7 @@ import edu.cmu.minorthird.classify.MutableInstance;
  * This abstract class contains most of the accessor methods for getting a 
  * question's classification results, while the details of exactly how that 
  * classification is determined (see the 
- * {@link QuestionClassifier#classify(Instance) classify}
+ * {@link info.ephyra.questionanalysis.atype.QuestionClassifier#classify(Instance) classify}
  * method) is left to the subclasses.
  * 
  * @author Justin Betteridge

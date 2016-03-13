@@ -41,5 +41,5 @@ public interface Ontology extends Dictionary {
 	 * @return related modifiers and their weights
 	 */
 	public abstract Map<String, Double> expandModifier(String modifier,
-													   POS pos);
+			POS pos);
 }

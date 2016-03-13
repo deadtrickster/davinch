@@ -25,11 +25,14 @@ import lemurproject.indri.ScoredExtentResult;
  */
 public class IndriKM extends KnowledgeMiner {
 	/** Maximum total number of search results. */
-	private static final int MAX_RESULTS_TOTAL = 500;
+	private static final int MAX_RESULTS_TOTAL = 20;
+//	private static final int MAX_RESULTS_TOTAL = 0;	
 	/** Maximum number of search results per query. */
-	private static final int MAX_RESULTS_PERQUERY = 500;
+	private static final int MAX_RESULTS_PERQUERY = 20;
+//	private static final int MAX_RESULTS_PERQUERY = 50;	
 	/** Maximum number of documents fetched at a time. */
-	private static final int MAX_DOCS = 500;
+	private static final int MAX_DOCS = 20;
+//	private static final int MAX_DOCS = 20;	
 	/**
 	 * <p>Regular expression that matches characters that cause problems in
 	 * Indri queries and thus should be removed from query strings.</p>
@@ -69,6 +72,7 @@ public class IndriKM extends KnowledgeMiner {
 		ArrayList<String[]> indices = new ArrayList<String[]>();
 		
 		String index = System.getenv("INDRI_INDEX");
+             //   System.out.println("Index: " + index);
 		if (index != null && index.length() > 0)
 			indices.add(index.split(";"));
 		for (int i = 2; ; i++) {
@@ -147,8 +151,9 @@ public class IndriKM extends KnowledgeMiner {
 			qs = qs.replace(m.group(0), "#1(" + m.group(1) + ")");
 		
 		// form passage query
-		qs = "#combine[p](" + qs + ")";
-		
+//		qs = "#combine[p](" + qs + ")";
+		qs = "#combine(" + qs + ")";
+	
 		return qs;
 	}
 	
@@ -255,7 +260,7 @@ public class IndriKM extends KnowledgeMiner {
 			MsgPrinter.printSearchError(e);  // print search error message
 			
 			MsgPrinter.printErrorMsg("\nSearch failed.");
-			System.exit(1);
+			//System.exit(1);
 			
 			return null;
 		}

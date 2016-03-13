@@ -41,7 +41,7 @@ import info.ephyra.questionanalysis.QuestionInterpreter;
 import info.ephyra.questionanalysis.QuestionNormalizer;
 import info.ephyra.search.Result;
 import info.ephyra.search.Search;
-//import info.ephyra.search.searchers.BingKM;
+import info.ephyra.search.searchers.BingKM;
 import info.ephyra.search.searchers.IndriKM;
 
 import java.util.ArrayList;

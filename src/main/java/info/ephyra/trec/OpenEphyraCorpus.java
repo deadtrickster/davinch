@@ -1,7 +1,6 @@
 package info.ephyra.trec;
 
 import info.ephyra.OpenEphyra;
-import info.ephyra.OpenEphyraOld;
 import info.ephyra.answerselection.AnswerSelection;
 import info.ephyra.answerselection.filters.AnswerPatternFilter;
 import info.ephyra.answerselection.filters.AnswerProjectionFilter;
@@ -33,7 +32,7 @@ import info.ephyra.questionanalysis.QuestionAnalysis;
 import info.ephyra.questionanalysis.QuestionNormalizer;
 import info.ephyra.search.Result;
 import info.ephyra.search.Search;
-import info.ephyra.search.searchers.BingAzureKM;
+import info.ephyra.search.searchers.BingKM;
 import info.ephyra.search.searchers.IndriKM;
 
 import java.util.ArrayList;
@@ -49,7 +48,7 @@ import java.util.ArrayList;
  * @author Nico Schlaefer
  * @version 2008-01-26
  */
-public class OpenEphyraCorpus extends OpenEphyraOld {
+public class OpenEphyraCorpus extends OpenEphyra {
 	/**
 	 * Entry point of Ephyra. Initializes the engine and starts the command line
 	 * interface.
@@ -66,7 +65,7 @@ public class OpenEphyraCorpus extends OpenEphyraOld {
 		Logger.enableLogging(true);
 		
 		// initialize Ephyra and start command line interface
-		(new OpenEphyraCorpus()).commandLine();
+		(new OpenEphyraCorpus()).commandLine("");
 	}
 	
 	/**
@@ -141,8 +140,9 @@ public class OpenEphyraCorpus extends OpenEphyraOld {
 		// search
 		// - knowledge miners for unstructured knowledge sources
 		Search.clearKnowledgeMiners();
-        Search.addKnowledgeMiner(new BingAzureKM());
-
+		Search.addKnowledgeMiner(new BingKM());
+//		Search.addKnowledgeMiner(new GoogleKM());
+//		Search.addKnowledgeMiner(new YahooKM());
 		// - knowledge annotators for (semi-)structured knowledge sources
 		Search.clearKnowledgeAnnotators();
 		

@@ -17,7 +17,7 @@ import info.ephyra.questionanalysis.QuestionInterpreter;
 import info.ephyra.questionanalysis.QuestionNormalizer;
 import info.ephyra.search.Result;
 import info.ephyra.search.Search;
-import info.ephyra.search.searchers.BingAzureKM;
+import info.ephyra.search.searchers.BingKM;
 import info.ephyra.trec.TREC8To12Parser;
 import info.ephyra.trec.TRECAnswer;
 import info.ephyra.trec.TRECPattern;
@@ -402,8 +402,12 @@ public class PatternLearner {
 			MsgPrinter.printErrorMsg("Could not load question patterns.");
 		
 		// add knowledge miners used to fetch text passages for pattern learning
-		MsgPrinter.printStatusMsg("Adding BingAzureKM...");
-		Search.addKnowledgeMiner(new BingAzureKM());
+		MsgPrinter.printStatusMsg("Adding BingKM...");
+		Search.addKnowledgeMiner(new BingKM());
+//		MsgPrinter.printStatusMsg("Adding GoogleKM...");
+//		Search.addKnowledgeMiner(new GoogleKM());
+//		MsgPrinter.printStatusMsg("Adding YahooKM...");
+//		Search.addKnowledgeMiner(new YahooKM());
 //		MsgPrinter.printStatusMsg("Adding IndriKMs...");
 //		for (String[] indriIndices : IndriKM.getIndriIndices())
 //			Search.addKnowledgeMiner(new IndriKM(indriIndices, false));

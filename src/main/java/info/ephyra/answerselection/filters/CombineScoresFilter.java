@@ -27,7 +27,7 @@ public class CombineScoresFilter extends Filter {
 		return result;
 	}
 	
-	/** @see Filter#apply(Result[])
+	/** @see info.ephyra.answerselection.filters.Filter#apply(info.ephyra.search.Result[])
 	 */
 	public Result[] apply(Result[] results) {
 		for (Result r : results) this.apply(r);

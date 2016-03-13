@@ -54,7 +54,7 @@ public class WikipediaTermImportanceFilter extends WebTermImportanceFilter {
 		super(normalizationMode, tfNormalizationMode, isCombined);
 	}
 	
-	/** @see WebTermImportanceFilter#getTargets(String)
+	/** @see info.ephyra.answerselection.filters.WebTermImportanceFilter#getTargets(java.lang.String)
 	 */
 	@Override
 	public String[] getTargets(String target) {
@@ -62,7 +62,7 @@ public class WikipediaTermImportanceFilter extends WebTermImportanceFilter {
 		return targets;
 	}
 	
-	/** @see WebTermImportanceFilter#getTermCounters(String[])
+	/** @see info.ephyra.answerselection.filters.WebTermImportanceFilter#getTermCounters(java.lang.String[])
 	 */
 	public HashMap<String, TermCounter> getTermCounters(String[] targets) {
 		if (targets.length == 0) return new HashMap<String, TermCounter>();

@@ -16,4 +16,4 @@ source ../config.inc
 cd ..
 
 export THREADS=10
-java -Djava.library.path=lib/search/ -server -Xms1024m -Xmx5096m info.ephyra.OpenEphyraServer "$*"
+java -Djava.library.path=lib/search/ -server -Xms1024m -Xmx2048m info.ephyra.OpenEphyraServer "$*"
