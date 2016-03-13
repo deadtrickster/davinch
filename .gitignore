@@ -3,3 +3,4 @@ log/*
 *.iml
 .idea/
 config.inc
+build/
