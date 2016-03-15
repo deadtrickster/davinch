@@ -11,4 +11,11 @@ export ASSERT=$1
 
 cd ..
 
-java -server -Xms512m -Xmx1024m info.ephyra.OpenEphyra
+export INDRI_INDEX=/data/custom/
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/thrift/thrift-0.9.3/lib/java/build
+export CLASSPATH=$CLASSPATH:/usr/local/thrift/thrift-0.9.3/lib/java/build
+export JAVA_CLASS_PATH=$JAVA_CLASS_PATH:/usr/local/thrift/thrift-0.9.3/lib/java/build
+
+java -server -Xms512m -Xmx1500m info.ephyra.OpenEphyra
